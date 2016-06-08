@@ -11,5 +11,13 @@ class analytics(models.Model):
     timep = models.CharField(max_length=128)
     geol = models.CharField(max_length=128)
 
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.org
+
+
 class jcanalytics(models.Model):
     org = models.CharField(max_length=128, unique=True)
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.org
